@@ -1,0 +1,262 @@
+/* Этот CSS построен с использованием Prepros.
+тут используется препроцессор Scss
+Автор: Di_asta 
+Версия: 7.3 */
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+/*////SETTINGS//////////////////////////////////////////////////////////////////////////*/
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #737373;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1046px;
+  margin: 0 auto;
+}
+
+/*//////HEADER/////////////////////////////////////////////////////////////////////////*/
+@media (max-width: 1067px) {
+  .header {
+    padding: 0 15px;
+  }
+}
+.header__container {
+  height: 104px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+@media (min-width: 426px) {
+  .header__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: minmax(auto, 100px) minmax(auto, 120px) minmax(auto, 300px);
+        grid-template: 1fr/minmax(auto, 100px) minmax(auto, 120px) minmax(auto, 300px);
+  }
+}
+.header__logo {
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 0.1px;
+}
+@media (max-width: 426px) {
+  .header__logo {
+    padding: 15px 0px;
+    color: #141212;
+  }
+}
+.header__menu {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+.header__list {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+}
+.header__link {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+@media (max-width: 872px) {
+  .header__link {
+    color: black;
+  }
+}
+
+.preview__img {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  z-index: -1;
+  width: 100%;
+  height: 793px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
+}
+@media (max-width: 872px) {
+  .preview__img {
+    opacity: 0.6;
+    color: black;
+  }
+}
+.preview__container {
+  padding: 0 6px;
+}
+.preview__title {
+  font-weight: 800;
+  font-size: calc(35px + 15 * ((100vw - 320px) / 960));
+  line-height: 138%;
+  letter-spacing: 0.2px;
+  color: #252B42;
+  max-width: 609px;
+  margin: 80px 0 33px 0;
+}
+@media (max-width: 605px) {
+  .preview__title {
+    margin: 25px 0px 30px 0px;
+  }
+}
+.preview__subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+  width: 376px;
+  font-size: calc(15px + 3 * ((100vw - 320px) / 960));
+  margin-bottom: 35px;
+}
+@media (max-width: 605px) {
+  .preview__subtitle {
+    color: #252B42;
+  }
+}
+.preview__button {
+  max-width: 352px;
+  height: 48px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(100px, 185px) 10px minmax(100px, 157px);
+  grid-template-columns: minmax(100px, 185px) minmax(100px, 157px);
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  font-weight: bold;
+  letter-spacing: 0.2;
+}
+@media (max-width: 428px) {
+  .preview__button {
+    row-gap: 10px;
+    height: 80px;
+    max-width: 420px;
+    width: 100%;
+    -ms-grid-rows: 1fr 10px 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template: 1fr 1fr/1fr;
+  }
+}
+.preview__button_orange {
+  min-width: 113px;
+  padding: 0 5px;
+  background: #FF7B47;
+  border-radius: 37px;
+  color: #FFFFFF;
+  font-weight: bold;
+  letter-spacing: 0.2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.preview__button_orange:visited {
+  color: #FFFFFF;
+}
+.preview__button_transparent {
+  border: 1px solid #0D5C63;
+  border-radius: 37px;
+  color: #0D5C63;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.preview__button_transparent:visited {
+  color: #0D5C63;
+}
